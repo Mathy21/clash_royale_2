@@ -46,26 +46,17 @@ find_room_instances = function(){
 		entity = new set_instance(_id,_dist);
 		room_instance[i] = entity;
 	}
+	var _f = function(_ent1,_ent2){
+		return _ent1.distance - _ent2.distance;	
+	}
+	array_sort(room_instance,_f);
 }
 
 nearest_entity = function(){
 		find_room_instances();
-
 		for(var i=0; i<array_length(room_instance);i++){
-			if(instance_exists(room_instance[i])){
-				
-				dist_array[i] = euclidian_distance(_player_x,_posx,_player_y,_posy);
-			}
-		}
-		array_sort(dist_array,true);
-		for(var j=0; j<array_length(dist_array);j++){
-			if(dist_array[j] > 0){
-				var _posx,_posy;
-				_posx = room_instance[j].x;
-				_posy = room_instance[j].y;
-				if(dist_array[j] == euclidian_distance(_player_x,_posx,_player_y,_posy)){
-					target = room_instance[j];
-				}
+			if(instance_exists(room_instance[1].instance)){
+					target = room_instance[1].instance;
 			}
 		}
 }
