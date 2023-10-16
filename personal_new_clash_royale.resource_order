@@ -22,6 +22,5 @@
   ],
   "ResourceOrderSettings": [
     {"name":"obj_test","order":2,"path":"objects/obj_test/obj_test.yy",},
-    {"name":"obj_range_hitbox","order":3,"path":"objects/obj_range_hitbox/obj_range_hitbox.yy",},
   ],
 }

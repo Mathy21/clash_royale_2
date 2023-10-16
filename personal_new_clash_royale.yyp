@@ -45,7 +45,6 @@
     {"id":{"name":"spr_range_hitbox","path":"sprites/spr_range_hitbox/spr_range_hitbox.yy",},},
     {"id":{"name":"obj_main","path":"objects/obj_main/obj_main.yy",},},
     {"id":{"name":"obj_test","path":"objects/obj_test/obj_test.yy",},},
-    {"id":{"name":"obj_range_hitbox","path":"objects/obj_range_hitbox/obj_range_hitbox.yy",},},
     {"id":{"name":"par_entity","path":"objects/par_entity/par_entity.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
