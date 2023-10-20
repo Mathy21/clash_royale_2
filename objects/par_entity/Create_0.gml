@@ -1,6 +1,7 @@
 // Target
 target = -1;
 focus = -1;
+type_target = 0;	// 0 - all, 1 - build
 type = 0	// 0 - Troop, 1 - Build
 room_instance = [];
 /// @method set_instance(id,distance)
@@ -55,8 +56,9 @@ find_room_instances = function(){
 nearest_entity = function(){
 		find_room_instances();
 		for(var i=0; i<array_length(room_instance);i++){
-			if(instance_exists(room_instance[1].instance)){
-					target = room_instance[1].instance;
+			if(instance_exists(room_instance[i].instance) && room_instance[i].instance.type == type_target && room_instance[i].instance != id){
+					target = room_instance[i].instance;
+					break;
 			}
 		}
 }
