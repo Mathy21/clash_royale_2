@@ -11,7 +11,7 @@ function entity_idle_state(){
 
 function entity_find_target_state(){
 	nearest_entity();
-	if(target != -1 && target != noone && target.distance <= range){
+	if(target != -1 && target != noone && target_dis <= range){
 		state = ENTITY_STATE.FOLLOW_TARGET	;	
 	}
 		else{
@@ -21,7 +21,7 @@ function entity_find_target_state(){
 
 function entity_follow_target_state(){
 	nearest_entity();
-	if(target != -1 && target != noone){
+	if(target != -1 && target != noone && target_dis <= range){
 		var _dir = point_direction(x,y,target.x,target.y);
 		hspd = lengthdir_x(spd,_dir);
 		vspd = lengthdir_y(spd,_dir);
@@ -34,6 +34,9 @@ function entity_follow_target_state(){
 }
 
 function entity_follow_tower_state(){
-		
+		nearest_entity();
+		if(target != -1 && target != noone && target_dis <= range){
+			state = ENTITY_STATE.FOLLOW_TARGET	;	
+		}
 }
 

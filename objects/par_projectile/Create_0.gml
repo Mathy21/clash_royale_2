@@ -1,0 +1,2 @@
+// Damage
+damage = 0;

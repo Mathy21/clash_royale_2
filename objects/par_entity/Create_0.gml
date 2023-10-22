@@ -1,5 +1,8 @@
+// Main
+life = 0;
 // Target
 target = -1;
+target_dis = 0;
 focus = -1;
 type_target = 0;	// 0 - all, 1 - build
 type = 0	// 0 - Troop, 1 - Build
@@ -64,7 +67,17 @@ nearest_entity = function(){
 			var _inst = room_instance[1].instance;
 			if(instance_exists(_inst) && _inst.type == type_target && _inst != id && i != 0){
 					target = room_instance[i].instance;
+					target_dis = room_instance[i].distance;
 					break;
 			}
 		}
+}
+
+damage_system = function(_damage){
+	if(_damage > 0 && life > 0){
+		life -= _damage;	
+	}
+	if(life <= 0){
+		instance_destroy();	
+	}
 }
