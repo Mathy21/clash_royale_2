@@ -9,6 +9,7 @@ type = 0	// 0 - Troop, 1 - Build
 room_instance = [];
 range = 100;
 target_tower = -1;
+jump_bridge = false;
 /// @method set_instance(id,distance)
 set_instance = function(_instance,_distance) constructor{
 		instance =  _instance;

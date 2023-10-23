@@ -54,6 +54,8 @@
     {"id":{"name":"obj_pekka","path":"objects/obj_pekka/obj_pekka.yy",},},
     {"id":{"name":"spr_placeholder_entity","path":"sprites/spr_placeholder_entity/spr_placeholder_entity.yy",},},
     {"id":{"name":"par_projectile","path":"objects/par_projectile/par_projectile.yy",},},
+    {"id":{"name":"spr_bridge_collision","path":"sprites/spr_bridge_collision/spr_bridge_collision.yy",},},
+    {"id":{"name":"obj_bridge","path":"objects/obj_bridge/obj_bridge.yy",},},
     {"id":{"name":"spr_range_hitbox","path":"sprites/spr_range_hitbox/spr_range_hitbox.yy",},},
     {"id":{"name":"obj_main","path":"objects/obj_main/obj_main.yy",},},
     {"id":{"name":"spr_pekka","path":"sprites/spr_pekka/spr_pekka.yy",},},
