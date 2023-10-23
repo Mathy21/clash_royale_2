@@ -7,7 +7,7 @@ function tower_attacking_state(){
 		shoot_cooldown--;	
 	}
 	if(shoot_cooldown <= 0){
-		instance_create_layer(x,y,"Instances",obj_tower_arrow);
+		instance_create_layer(x,y,"Instances",projectile);
 		shoot_cooldown = shoot_cooldown_v;
 	}
 }

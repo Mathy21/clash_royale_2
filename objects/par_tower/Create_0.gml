@@ -7,6 +7,7 @@ can_fire = false;
 idle_spr = noone;
 attacking_spr = noone;
 // Combat
+projectile = noone;
 shoot_cooldown_v = 0;
 shoot_cooldown = shoot_cooldown_v;
 
