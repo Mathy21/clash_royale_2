@@ -1,5 +1,6 @@
 // Main
 life = 0;
+is_game = true;
 // Target
 target = -1;
 target_dis = 0;
@@ -90,14 +91,18 @@ nearest_entity = function(){
 		for(var i=0; i<array_length(room_instance);i++){
 			var _inst = room_instance[i].instance;
 			var _dist = room_instance[i].distance;
-			if(instance_exists(_inst) &&  _inst != id && i != 0 && _dist <= range){
-					tower_priority = false;
+			if(instance_exists(_inst) &&  _inst != id && _dist <= range){
 					target = _inst
 					target_dis = _dist;
 					break;
 			}
-				else{
-					tower_priority = true;	
+				else if( instance_exists(_inst) && _inst.type == 2 && _inst != id){
+					target = _inst;
+					target_dis = _dist;
+					break;
+				}
+				if(!instance_exists(_inst)){
+					array_delete(room_instance,i,1);	
 				}
 		}
 }

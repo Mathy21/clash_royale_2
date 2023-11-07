@@ -1,5 +1,7 @@
 // Main
 value = 0;
+type = 2;
+index = -1;
 // target
 range = 0;
 can_fire = false;
