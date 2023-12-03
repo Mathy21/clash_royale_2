@@ -1,6 +1,5 @@
 // Main
 life = 0;
-is_game = true;
 // Target
 target = -1;
 target_dis = 0;
@@ -9,8 +8,6 @@ type_target = 0;	// 0 - all, 1 - build, 2 - none
 type = 0	// 0 - Troop, 1 - Build, 2 - Main
 room_instance = [];
 range = 150;
-target_tower = -1;
-tower_priority = false;
 jump_bridge = false;
 pass_bridge = false;
 /// @method set_instance(id,distance)
@@ -58,32 +55,28 @@ find_room_instances = function(_instance){
 	var _player_y = y;
 	for(var i=0;i<_amount;i++){
 		var _id = instance_find(_instance,i);
+		if(_id.type != 3){
 		var _posx,_posy;
 		_posx = _id.x;
 		_posy = _id.y;
 		var _dist = euclidian_distance(_player_x,_posx,_player_y,_posy);
 		entity = new set_instance(_id,_dist);
 			room_instance[i] = entity;
+		}
+			else if(_id.type == 3 && !pass_bridge){
+				var _posx,_posy;
+				_posx = _id.x;
+				_posy = _id.y;
+				var _dist = euclidian_distance(_player_x,_posx,_player_y,_posy);
+				entity = new set_instance(_id,_dist);
+					room_instance[i] = entity;
+			}
 	}
 		var _f = function(_ent1,_ent2){
 			return _ent1.distance - _ent2.distance;	
 		}
 		array_sort(room_instance,_f);
 }
-
-nearest_main = function(){
-	find_room_instances(par_tower);
-	for(var i=0; i<array_length(room_instance);i++){
-		var _inst = room_instance[i].instance;
-		var _dist = room_instance[i].distance;
-		if(instance_exists(_inst) && _inst != id){
-			target = _inst;
-			target_dis = _dist;
-			break;
-		}
-	}
-	nearest_entity();
-}	
 
 ///@method nearest_entity(instance)
 nearest_entity = function(){

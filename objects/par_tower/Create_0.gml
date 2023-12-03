@@ -2,6 +2,9 @@
 value = 0;
 type = 2;
 index = -1;
+tower_id = -1;
+king_tower = noone;
+tower_type = 0; // 0 - Player, 1 - Enemy
 // target
 range = 0;
 can_fire = false;

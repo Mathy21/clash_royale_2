@@ -1,0 +1,1 @@
+obj_control.is_game = false;

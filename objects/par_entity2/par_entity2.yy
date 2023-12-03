@@ -1,17 +1,15 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_control",
+  "name": "par_entity2",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Main",
-    "path": "folders/Objects/Main.yy",
+    "name": "Entitys",
+    "path": "folders/Objects/Entitys.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -29,7 +27,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_placeholder_entity",
+    "path": "sprites/spr_placeholder_entity/spr_placeholder_entity.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }
